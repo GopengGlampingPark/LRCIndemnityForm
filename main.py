@@ -348,7 +348,7 @@ def insert_to_sheet():
 	# Append activities if available
 	if session.get("activities"):
 		activities_info = [
-			[C_UniqueID, C_bookingID, activity['AN'], activity['AD'], activity['AT']]
+			[C_UniqueID, C_bookingID, session.get("fullname"), activity['AN'], activity['AD'], activity['AT']]
 			for activity in session['activities'] if isinstance(activity, dict)
 		]
 
